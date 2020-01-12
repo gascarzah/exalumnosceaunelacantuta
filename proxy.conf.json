@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "http://exalumnosceaunelacantuta.com:9090",
+      "secure": false,
+      "changeOrigin": true,
+
+  
+}
