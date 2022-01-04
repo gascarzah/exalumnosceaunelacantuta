@@ -18,24 +18,25 @@ export class ArticuloVistaComponent implements OnInit {
   articulo: Articulo;
   articuloDetForm: FormGroup;
   fotos: Foto[];
-  
+
   ngOnInit() {
 
     this._Activatedroute.paramMap.subscribe(params => {
     this.id = +params.get('id');
-  
-    this.apiService.getArticulo(this.id).subscribe( 
-      data => { this.articulo = data.result; 
-        /* console.log(this.articulo)  */  },
+
+    this.apiService.getArticulo(this.id).subscribe(
+      data => { this.articulo = data.result;
+        //  console.log(this.articulo)
+       },
       error => console.log('oops', error)
      );
 
      this.apiService.getFotosArticulo(this.id).subscribe(data => {
       this.fotos = data.result;
-      /* console.log("fotos")
-      console.log(this.fotos) */
+      //  console.log("fotos")
+      // console.log(this.fotos)
     })
- 
+
   });
 
   }
@@ -43,4 +44,4 @@ export class ArticuloVistaComponent implements OnInit {
 
 
 }
-  
+

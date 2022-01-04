@@ -12,14 +12,14 @@ import { ArticuloVistaComponent } from './articulo/articulo-vista/articulo-vista
 import { ArticuloListComponent } from './articulo/articulo-list/articulo-list.component';
 
 import localeEsPe from '@angular/common/locales/es-PE';
-import { registerLocaleData } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, registerLocaleData } from '@angular/common';
 import { AlumnoNuevoComponent } from './alumno/alumno-nuevo/alumno-nuevo.component';
 
 registerLocaleData(localeEsPe, 'es-Pe');
 
 @NgModule({
   declarations: [
-    
+
     AppComponent,
     HomeComponent,
     ArticuloVistaComponent,
@@ -34,7 +34,8 @@ registerLocaleData(localeEsPe, 'es-Pe');
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'es_PE'}],
+  providers: [{provide: LOCALE_ID, useValue: 'es_PE'},
+  {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

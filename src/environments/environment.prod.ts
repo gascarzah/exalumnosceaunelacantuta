@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   backend: {
-    baseURL:"produccion"
+    baseURL:"https://api.exceaune.gascarzah.com"
   }
 };

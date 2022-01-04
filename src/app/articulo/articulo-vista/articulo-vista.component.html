@@ -28,17 +28,17 @@
         <div class="kingster-breadcrumbs-container kingster-container">
             <div class="kingster-breadcrumbs-item kingster-item-pdlr"> <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Inicio" href="index.html" class="home"><span property="name">Inicio</span></a>
                 <meta property="position" content="1">
-                </span>&gt;<span property="itemListElement" typeof="ListItem" *ngIf="articulo.tipartid != 1" >
-                    <a property="item" typeof="WebPage" title="Tipo de Articulo" href="/articulo-lista/{{articulo.tipartid}}" class="taxonomy category" *ngIf="articulo.tipartid != 1" >
-                        
-                        <span property="name" *ngIf="articulo.tipartid == 2 " >Evento</span>
-                        <span property="name" *ngIf="articulo.tipartid == 3 " >Curiosidad</span>
-                        <span property="name" *ngIf="articulo.tipartid == 4 " >Recuerdos</span>
-                        <span property="name" *ngIf="articulo.tipartid == 5 " >Destacados</span>
+                </span>&gt;<span property="itemListElement" typeof="ListItem" *ngIf="articulo?.tipartid != 1" >
+                    <a property="item" typeof="WebPage" title="Tipo de Articulo" href="/articulo-lista/{{articulo?.tipartid}}" class="taxonomy category" *ngIf="articulo?.tipartid != 1" >
+
+                        <span property="name" *ngIf="articulo?.tipartid == 2 " >Evento</span>
+                        <span property="name" *ngIf="articulo?.tipartid == 3 " >Curiosidad</span>
+                        <span property="name" *ngIf="articulo?.tipartid == 4 " >Recuerdos</span>
+                        <span property="name" *ngIf="articulo?.tipartid == 5 " >Destacados</span>
                     </a>
                 <meta property="position" content="2" >
                 </span>&gt;<span property="itemListElement" typeof="ListItem" >
-                 <a href="/articulo-vista/{{articulo.articuloid}}"  ><span property="name">{{ articulo?.titulo }}</span> </a>
+                 <a href="/articulo-vista/{{articulo?.articuloid}}"  ><span property="name">{{ articulo?.titulo }}</span> </a>
                 <meta property="position" content="3">
                 </span>
             </div>
@@ -53,8 +53,8 @@
                             <div class="kingster-single-article clearfix">
                                 <div class="kingster-single-article-content " >
                                         <!-- <div class="gdlr-core-blog-modern-content  gdlr-core-center-align"><h4>{{ articulo?.titulo }}</h4> </div> -->
-                                        <div  [innerHTML]="articulo?.contenido "></div>        
-                                             
+                                        <div  [innerHTML]="articulo?.contenido "></div>
+
                                                 <div *ngFor="let foto of fotos" class="gdlr-core-blog-modern-content  gdlr-core-center-align">
                                                         <img src="{{foto.rutafoto}}"   alt="{{foto.titulo}}" />
                                                         <p>{{foto.detalle}}</p>
@@ -67,5 +67,4 @@
             </div>
         </div>
     </div>
-    
-   
+
