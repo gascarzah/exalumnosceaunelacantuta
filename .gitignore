@@ -47,5 +47,5 @@ testem.log
 Thumbs.db
 
 #sin imagenes ni fotos
-# /src/assets/fotos
-# /src/assets/images
+/src/assets/fotos
+/src/assets/images
