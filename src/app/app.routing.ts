@@ -19,4 +19,4 @@ const routes: Routes = [
     { path: 'alumno-nuevo', component: AlumnoNuevoComponent },
 ];
 
-export const routing = RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' });
+export const routing = RouterModule.forRoot(routes, {});

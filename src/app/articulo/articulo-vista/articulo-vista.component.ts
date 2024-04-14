@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Articulo } from 'src/app/model/articulo.model';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { Foto } from 'src/app/model/foto.model';
 
 @Component({
@@ -16,7 +16,7 @@ export class ArticuloVistaComponent implements OnInit {
   constructor(private _Activatedroute:ActivatedRoute, private router: Router, private apiService: ApiService) { }
   id: number;
   articulo: Articulo;
-  articuloDetForm: FormGroup;
+  articuloDetForm: UntypedFormGroup;
   fotos: Foto[];
 
   ngOnInit() {
